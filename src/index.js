@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
         veletlenSzamok[i] = Math.floor(Math.random() * 30 + 1);
         console.log(veletlenSzamok[i]);
     }
-    t = veletlenSzamok.filter((e) => e%5==0)
-    console.log(t);
-})
+
+    document.getElementById('kivalogatas').addEventListener('click', () => {
+        t = veletlenSzamok.filter((e) => e%5==0)
+        console.log(t);
+    });
+    document.getElementById('hozzaadBtn').addEventListener('click', () => {
+        veletlenSzamok.push(parseInt(document.getElementById('szamBemenet').value));
+        console.log(veletlenSzamok);
+    })
+});
