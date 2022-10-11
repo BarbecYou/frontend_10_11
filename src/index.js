@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const veletlenSzamok = [];
     for (let i = 0; i < 20; i++){
@@ -13,4 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         veletlenSzamok.push(parseInt(document.getElementById('szamBemenet').value));
         console.log(veletlenSzamok);
     })
+    console.log(new Szazlabu(200).toString());
 });
+
+class Szazlabu{
+
+    constructor(labakSzama){
+        this.labakSzama = labakSzama;
+    }
+
+    toString(){
+        return `${this.labakSzama} lábú százlábú`;
+    }
+}
