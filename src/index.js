@@ -16,7 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(veletlenSzamok);
     })
     console.log(new Szazlabu(200).toString());
+    console.log(labakbolSzazlabuak(veletlenSzamok).toString());
 });
+
+
+function labakbolSzazlabuak(tomb){
+    let ujSzazlabuak = [];
+    tomb.forEach(e => {
+        ujSzazlabuak.push(new Szazlabu(e));
+    });
+    return ujSzazlabuak;
+}
 
 class Szazlabu{
 
